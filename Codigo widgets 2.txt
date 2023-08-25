@@ -1,0 +1,10 @@
+ // Stack permite o empilhamento dos containers
+            Stack(
+      alignment: AlignmentDirectional.center,
+      children: [
+        Container(color: Colors.white, width: 800, height: 800),
+        Container(color: Colors.black, width: 600, height: 600),
+        Container(color: Colors.red, width: 400, height: 400),
+        Container(color: Colors.green, width: 300, height: 300),
+      ],
+    )

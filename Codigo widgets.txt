@@ -1,0 +1,51 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home:
+          // Define o empilhamento dos containers
+          Stack(
+        // Define o alinhamento dos containers
+        alignment: AlignmentDirectional.center,
+        // Children estabelece a relação dos containers do app
+        children: [
+          Container(color: Colors.red, width: 1000, height: 1000),
+          Container(
+            color: Colors.blue,
+            width: 500,
+            height: 500,
+            child: Text(
+              "Mobile",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 30,
+                fontStyle: FontStyle.normal,
+                decoration: TextDecoration.none,
+              ),
+              textAlign: TextAlign.center, // centraliza o texto
+            ),
+          ),
+          Container(color: Colors.green, height: 250, width: 250),
+          // Widget Text
+          // Style altera as propriedades do texto do app,
+          Text("APP Flutter",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 30,
+                fontStyle: FontStyle.normal,
+                decoration: TextDecoration.none,
+              )),
+        ],
+      ),
+    );
+  }
+}
